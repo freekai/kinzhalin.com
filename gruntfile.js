@@ -8,7 +8,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON("package.json"),
         dst: "dist",
         requirejs: {
-            main: {
+            build: {
                 options: {
                     appDir: "www",
                     baseUrl: "./",
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            main: {
+            build: {
                 files: [
                     {
                         expand: true,
@@ -40,6 +40,18 @@ module.exports = function (grunt) {
                         ]
                     }
                 ]
+            }
+        },
+        "ftp-deploy": {
+            build: {
+                    auth: {
+                        host: "mkhs.com",
+                        port: 21,
+                        authKey: "secret"
+                    },
+                src: "dist",
+                dest: "public_html",
+                exclusions: ["build.txt"]
             }
         }
     });
@@ -75,7 +87,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-requirejs");
+    grunt.loadNpmTasks("grunt-ftp-deploy");
     
     grunt.registerTask("default", ["clean-dist", "make-dist", "copy", "requirejs"]);
+    
+    grunt.registerTask("publish", ["ftp-deploy"]);
     
 };
