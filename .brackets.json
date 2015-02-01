@@ -15,5 +15,13 @@
             "require": false,
             "$": false
         }
+    },
+    "path": {
+        "www/js/3rd/*.js": {
+            "linting.enabled": false
+        },
+        "node_modules/**/*.js": {
+            "linting.enabled": false
+        }
     }
 }
