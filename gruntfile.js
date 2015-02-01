@@ -90,7 +90,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-ftp-deploy");
     
     grunt.registerTask("default", ["clean-dist", "make-dist", "copy", "requirejs"]);
-    
     grunt.registerTask("publish", ["ftp-deploy"]);
+    grunt.registerTask("clean", ["clean-dist"]);
     
 };
