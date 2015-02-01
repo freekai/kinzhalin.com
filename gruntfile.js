@@ -44,11 +44,11 @@ module.exports = function (grunt) {
         },
         "ftp-deploy": {
             build: {
-                    auth: {
-                        host: "mkhs.com",
-                        port: 21,
-                        authKey: "secret"
-                    },
+                auth: {
+                    host: "mkhs.com",
+                    port: 21,
+                    authKey: "secret"
+                },
                 src: "dist",
                 dest: "public_html",
                 exclusions: ["build.txt"]
