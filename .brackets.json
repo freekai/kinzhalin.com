@@ -9,6 +9,7 @@
         }
     },
     "jslint.options": {
+        "vars": true,
         "global": {
             "define": false,
             "require": false,
