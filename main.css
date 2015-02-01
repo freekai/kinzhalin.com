@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "pix";
+    src: url("fonts/ST01R.woff");
+}
+@font-face {
+    font-family: "rosario";
+    src: url("fonts/Rosario-Regular.otf") format("woff");
+}
+
+body {
+    background-color: #6d86c9;
+    font-family: "rosario";
+}
+
+.header {
+    background-color: #5e6e9a;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.title {
+    height: 150px;
+    font-family: "pix";
+    font-size: 50px;
+    color: white;
+    padding-left: 50px;
+}
+
+.name {
+    float: left;
+    white-space: nowrap;
+}
+
+.subname {
+    font-size: 20px;
+}
+
+#description {
+    float: right;
+    font-family: "rosario";
+    font-size: 13px;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 270px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+#description p {
+    margin: 5px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #56c4ed;
+}
+
+a:hover {
+    color: aqua;
+}
+
+#menu {
+    background-color: #5e6e9a;
+}
+
+#menu .menu-item {
+    cursor: pointer;
+    padding: 0px 10px 10px 10px;
+    margin: 10px;
+    background-color: #1f305c;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 22px;
+    font-family: "pix";
+    overflow: hidden;
+}
+
+#content {
+    margin: 80px 30px;
+    padding: 12px;
+    background-color: #eaeaea;
+    border-radius: 3px;
+}
+
+#content p {
+    font-size: 15px;
+    color: #1f305c;
+}
+
+@media screen and (max-width: 850px) {
+    #description {
+        display: none;
+    }
+}

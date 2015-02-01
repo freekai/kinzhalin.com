@@ -1,0 +1,18 @@
+{
+    "language": {
+        "html": {
+            "spaceUnits": 2
+        },
+        "javascript": {
+            "linting.prefer": ["JSHint", "JSLint"],
+            "linting.usePreferredOnly": true
+        }
+    },
+    "jslint.options": {
+        "global": {
+            "define": false,
+            "require": false,
+            "$": false
+        }
+    }
+}
