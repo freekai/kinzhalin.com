@@ -1,10 +1,10 @@
 @font-face {
     font-family: "pix";
-    src: url("fonts/ST01R.woff");
+    src: url("res/ST01R.woff");
 }
 @font-face {
     font-family: "rosario";
-    src: url("fonts/Rosario-Regular.otf") format("woff");
+    src: url("res/Rosario-Regular.otf") format("woff");
 }
 
 body {
